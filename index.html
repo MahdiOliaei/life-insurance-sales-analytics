@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Life Insurance Sales Performance & Incentive Analytics</title>
+<style>
+:root{
+ --bg:#f6f8fb;--ink:#152033;--muted:#667085;--panel:#ffffff;--line:#e7ebf2;
+ --accent:#1d4ed8;--accent2:#0f766e;--soft:#eef4ff;--gold:#b7791f;--danger:#b42318;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding:28px}
+.hero{background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff;border-radius:24px;padding:42px;box-shadow:0 20px 60px rgba(15,23,42,.16)}
+.kicker{font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.8;font-weight:700}
+h1{font-size:42px;line-height:1.12;margin:10px 0 14px}
+.hero p{max-width:820px;font-size:18px;color:#dbe6ff;margin:0}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.badge{padding:8px 12px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.08);font-size:13px}
+.note{margin-top:16px;font-size:12px;color:#c7d2fe}
+.grid{display:grid;gap:18px}
+.kpis{grid-template-columns:repeat(4,1fr);margin:22px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(15,23,42,.04)}
+.kpi .v{font-size:30px;font-weight:800;letter-spacing:-.02em}
+.kpi .l{color:var(--muted);font-size:13px;margin-top:2px}
+.section{margin-top:26px}
+.section h2{font-size:26px;margin:0 0 14px}
+.section .lede{color:var(--muted);max-width:900px;margin-top:-6px}
+.two{grid-template-columns:1.15fr .85fr}
+.three{grid-template-columns:repeat(3,1fr)}
+.pipeline{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
+.step{background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:16px;min-height:110px}
+.step b{display:block;margin-bottom:6px}
+.step small{color:var(--muted)}
+.chart{height:330px;display:flex;align-items:flex-end;gap:9px;padding:18px 8px 26px;border-bottom:1px solid var(--line)}
+.bar{flex:1;min-width:18px;background:linear-gradient(180deg,#2563eb,#60a5fa);border-radius:7px 7px 0 0;position:relative;transition:.2s}
+.bar:hover{filter:brightness(.96);transform:translateY(-2px)}
+.bar span{position:absolute;bottom:-23px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--muted);white-space:nowrap}
+.bar i{position:absolute;top:-23px;left:50%;transform:translateX(-50%);font-style:normal;font-size:10px;color:#334155}
+.metricline{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line)}
+.metricline:last-child{border-bottom:0}
+.metricline span{color:var(--muted)}
+.metricline b{font-variant-numeric:tabular-nums}
+.callout{background:#eff6ff;border:1px solid #bfdbfe;border-radius:16px;padding:18px}
+.callout strong{color:#1d4ed8}
+.finding{border-left:4px solid var(--accent);padding:4px 0 4px 14px;margin:15px 0}
+.finding b{display:block;margin-bottom:4px}
+.finding p{margin:0;color:var(--muted)}
+.code{background:#0b1220;color:#d6e4ff;border-radius:16px;padding:18px;overflow:auto;font:13px/1.5 Consolas,monospace;white-space:pre}
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skill{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:10px;padding:8px 10px;font-size:13px;font-weight:600}
+.footer{margin:34px 0 12px;color:var(--muted);font-size:12px;text-align:center}
+@media(max-width:900px){
+ .kpis,.two,.three{grid-template-columns:1fr 1fr}
+ .pipeline{grid-template-columns:1fr 1fr}
+ h1{font-size:34px}
+}
+@media(max-width:640px){
+ .wrap{padding:14px}
+ .hero{padding:28px}
+ .kpis,.two,.three,.pipeline{grid-template-columns:1fr}
+ .chart{gap:5px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="kicker">Portfolio Case Study</div>
+    <h1>Life Insurance Sales Performance & Incentive Analytics</h1>
+    <p>End-to-end analysis of a multi-source life-insurance sales campaign: business-rule translation, data reconciliation, seller ranking, concentration analysis, and management-ready insight.</p>
+    <div class="badges">
+      <div class="badge">Excel</div><div class="badge">Python</div><div class="badge">SQL</div>
+      <div class="badge">Data Quality</div><div class="badge">Sales Analytics</div><div class="badge">Insurance Analytics</div>
+    </div>
+    <div class="note">Public portfolio version. Customer, policy, seller, branch, and monetary identifiers are removed or normalized.</div>
+  </section>
+
+  <div class="grid kpis">
+    <div class="card kpi"><div class="v">59,584</div><div class="l">current-period sales rows reviewed</div></div>
+    <div class="card kpi"><div class="v">1,512</div><div class="l">active sellers after portfolio filters</div></div>
+    <div class="card kpi"><div class="v">71</div><div class="l">branch entities represented</div></div>
+    <div class="card kpi"><div class="v">6,395</div><div class="l">withdrawal / surrender / cancellation rows in workflow</div></div>
+  </div>
+
+  <section class="section">
+    <h2>Business problem</h2>
+    <p class="lede">The sales organization needed a transparent, reproducible way to evaluate a life-insurance campaign across multiple operational systems. New business and existing-portfolio collections carried different weights, while withdrawals, cancellations, and surrenders had to be considered separately. The final result had to be explainable to both management and the sales network.</p>
+    <div class="grid three">
+      <div class="card"><b>1. Multiple source systems</b><p>Sales transactions, adjustment files, network master data, and branch-reference data had different structures and identifiers.</p></div>
+      <div class="card"><b>2. Rule-heavy scoring</b><p>Campaign-window dates, document cutoffs, 80/20 contribution weights, and eligibility rules had to be translated into repeatable logic.</p></div>
+      <div class="card"><b>3. Management usability</b><p>The output needed to go beyond ranking and surface concentration, productivity, exceptions, and data-quality issues.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Analytics workflow</h2>
+    <div class="pipeline">
+      <div class="step"><b>Raw inputs</b><small>Two sales systems + adjustments + network master + branch mapping</small></div>
+      <div class="step"><b>Clean & standardize</b><small>Normalize dates, seller codes, branch names, and numeric fields</small></div>
+      <div class="step"><b>Apply business rules</b><small>Campaign window, document cutoff, new vs. existing business</small></div>
+      <div class="step"><b>Score & reconcile</b><small>Weighted performance, network matching, exclusions, exceptions</small></div>
+      <div class="step"><b>Explain</b><small>Seller/branch ranking, concentration, insights, management actions</small></div>
+    </div>
+  </section>
+
+  <section class="section grid two">
+    <div class="card">
+      <h2>Seller performance distribution</h2>
+      <p class="lede">Public view uses a normalized Performance Index; the highest observed seller is indexed to 100.</p>
+      <div id="sellerChart" class="chart"></div>
+    </div>
+    <div class="card">
+      <h2>Concentration signals</h2>
+      <div class="metricline"><span>Top seller share</span><b>27.5%</b></div>
+      <div class="metricline"><span>Top 3 seller share</span><b>56.3%</b></div>
+      <div class="metricline"><span>Top 10 seller share</span><b>77.1%</b></div>
+      <div class="metricline"><span>HHI</span><b>0.133</b></div>
+      <div class="callout" style="margin-top:18px"><strong>Interpretation:</strong> Performance is highly concentrated. This makes top-seller dependency a management issue, not just a ranking result.</div>
+    </div>
+  </section>
+
+  <section class="section grid two">
+    <div class="card">
+      <h2>Branch performance</h2>
+      <p class="lede">Branches are intentionally anonymized in the public portfolio.</p>
+      <div id="branchChart" class="chart"></div>
+    </div>
+    <div class="card">
+      <h2>Selected findings</h2>
+      <div class="finding"><b>Concentration is material</b><p>The top 10 sellers account for 77.1% of the weighted performance represented in this portfolio build.</p></div>
+      <div class="finding"><b>Data reconciliation is part of the analysis</b><p>Sales and network-master records come from separate systems, so seller and branch standardization must precede any trustworthy ranking.</p></div>
+      <div class="finding"><b>Gross sales alone are insufficient</b><p>The operating workflow includes 6,395 adjustment records across withdrawals, surrenders, and cancellations.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Scoring logic</h2>
+    <div class="grid two">
+      <div class="card">
+        <div class="metricline"><span>New-business contribution</span><b>80%</b></div>
+        <div class="metricline"><span>Existing-portfolio contribution</span><b>20%</b></div>
+        <div class="metricline"><span>Payment window</span><b>Campaign period</b></div>
+        <div class="metricline"><span>Document eligibility</span><b>Cutoff applied</b></div>
+        <div class="metricline"><span>Adjustments</span><b>Tracked separately</b></div>
+      </div>
+      <div class="card">
+        <b>Illustrative SQL used in the portfolio-safe demo</b>
+        <pre class="code">WITH ranked AS (
+  SELECT
+    seller_id,
+    performance_index,
+    network_share_pct,
+    ROW_NUMBER() OVER (
+      ORDER BY performance_index DESC
+    ) AS seller_rank
+  FROM seller_performance
+)
+SELECT *
+FROM ranked
+WHERE seller_rank &lt;= 20;</pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What I would deliver to management</h2>
+    <div class="grid three">
+      <div class="card"><b>Executive dashboard</b><p>Performance, participation, productivity, concentration, and portfolio-quality KPIs.</p></div>
+      <div class="card"><b>Network scorecards</b><p>Seller and branch ranking with rule-level traceability and exclusion reasons.</p></div>
+      <div class="card"><b>Decision recommendations</b><p>Actions for concentration risk, low-productivity segments, data quality, and incentive design.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Portfolio-safe data design</h2>
+    <div class="card">
+      <p>No customer names, national IDs, policy numbers, contracts, real seller/branch identifiers, or company monetary totals are exposed. The public dataset contains anonymized entities plus normalized indices and percentages so that the analytical method is inspectable without disclosing confidential operational data.</p>
+      <div class="skills">
+        <span class="skill">Data cleaning</span><span class="skill">Reconciliation</span><span class="skill">KPI design</span>
+        <span class="skill">Ranking</span><span class="skill">Concentration analysis</span><span class="skill">SQL</span>
+        <span class="skill">Python</span><span class="skill">Insurance domain knowledge</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">Mahdi Oliaei — Data Analyst | Insurance & Sales Analytics | Actuarial Analytics</div>
+</div>
+
+<script>
+const sellers=[{"seller_id": "Seller_001", "performance_index": 100.0, "network_share_pct": 27.518, "new_business_mix_pct": 55.1, "transaction_count_index": 20.6, "rank": 1}, {"seller_id": "Seller_002", "performance_index": 74.29, "network_share_pct": 20.444, "new_business_mix_pct": 54.3, "transaction_count_index": 50.1, "rank": 2}, {"seller_id": "Seller_003", "performance_index": 30.38, "network_share_pct": 8.359, "new_business_mix_pct": 93.5, "transaction_count_index": 0.7, "rank": 3}, {"seller_id": "Seller_004", "performance_index": 16.02, "network_share_pct": 4.408, "new_business_mix_pct": 86.3, "transaction_count_index": 0.6, "rank": 4}, {"seller_id": "Seller_005", "performance_index": 14.53, "network_share_pct": 3.998, "new_business_mix_pct": 100.0, "transaction_count_index": 0.0, "rank": 5}, {"seller_id": "Seller_006", "performance_index": 12.86, "network_share_pct": 3.537, "new_business_mix_pct": 100.0, "transaction_count_index": 0.1, "rank": 6}, {"seller_id": "Seller_007", "performance_index": 9.3, "network_share_pct": 2.561, "new_business_mix_pct": 99.9, "transaction_count_index": 2.1, "rank": 7}, {"seller_id": "Seller_008", "performance_index": 9.23, "network_share_pct": 2.539, "new_business_mix_pct": 100.0, "transaction_count_index": 21.3, "rank": 8}, {"seller_id": "Seller_009", "performance_index": 7.8, "network_share_pct": 2.146, "new_business_mix_pct": 100.0, "transaction_count_index": 0.7, "rank": 9}, {"seller_id": "Seller_010", "performance_index": 5.78, "network_share_pct": 1.59, "new_business_mix_pct": 37.9, "transaction_count_index": 100.0, "rank": 10}, {"seller_id": "Seller_011", "performance_index": 5.46, "network_share_pct": 1.501, "new_business_mix_pct": 0.0, "transaction_count_index": 12.4, "rank": 11}, {"seller_id": "Seller_012", "performance_index": 4.7, "network_share_pct": 1.294, "new_business_mix_pct": 92.2, "transaction_count_index": 0.7, "rank": 12}];
+const branches=[{"branch_id": "Branch_01", "performance_index": 100.0, "new_business_mix_pct": 59.2, "activity_index": 57.9, "rank": 1}, {"branch_id": "Branch_02", "performance_index": 29.55, "new_business_mix_pct": 49.6, "activity_index": 31.6, "rank": 2}, {"branch_id": "Branch_03", "performance_index": 29.0, "new_business_mix_pct": 91.6, "activity_index": 2.2, "rank": 3}, {"branch_id": "Branch_04", "performance_index": 28.0, "new_business_mix_pct": 34.4, "activity_index": 24.7, "rank": 4}, {"branch_id": "Branch_05", "performance_index": 26.56, "new_business_mix_pct": 73.4, "activity_index": 100.0, "rank": 5}, {"branch_id": "Branch_06", "performance_index": 25.7, "new_business_mix_pct": 69.1, "activity_index": 26.2, "rank": 6}, {"branch_id": "Branch_07", "performance_index": 16.55, "new_business_mix_pct": 91.2, "activity_index": 11.3, "rank": 7}, {"branch_id": "Branch_08", "performance_index": 16.11, "new_business_mix_pct": 73.4, "activity_index": 5.4, "rank": 8}, {"branch_id": "Branch_09", "performance_index": 13.69, "new_business_mix_pct": 30.4, "activity_index": 11.6, "rank": 9}, {"branch_id": "Branch_10", "performance_index": 11.23, "new_business_mix_pct": 60.9, "activity_index": 12.0, "rank": 10}];
+function bars(elId, data, labelKey) {
+  const el=document.getElementById(elId);
+  data.forEach((d,i)=>{
+    const b=document.createElement('div');
+    b.className='bar';
+    b.style.height=Math.max(8,d.performance_index)*2.35+'px';
+    b.title=`${d[labelKey]} — Index ${d.performance_index}`;
+    b.innerHTML=`<i>${d.performance_index}</i><span>${d[labelKey].replace('Seller_','S').replace('Branch_','B')}</span>`;
+    el.appendChild(b);
+  });
+}
+bars('sellerChart',sellers,'seller_id');
+bars('branchChart',branches,'branch_id');
+</script>
+</body>
+</html>
